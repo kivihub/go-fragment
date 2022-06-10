@@ -1,6 +1,4 @@
-github.com/kivihub/go-project v0.0.0-20220609164205-e44c9322da7e h1:MGnASrIn0juWCyBXm5FR7Dv0kfrrZLxsh1mUMfrod14=
-github.com/kivihub/go-project v0.0.0-20220609164205-e44c9322da7e/go.mod h1:NVSXstZcVIo1hKksece+1S1JuwXTNuJvRXqezaVxQYQ=
-github.com/kivihub/go-project v0.0.0-20220609170343-7e2edced1fb9 h1:iLbpGUwTBhzEGxwG5AOBqZnnNb2y9GQEr2rhRds81FM=
-github.com/kivihub/go-project v0.0.0-20220609170343-7e2edced1fb9/go.mod h1:NVSXstZcVIo1hKksece+1S1JuwXTNuJvRXqezaVxQYQ=
 github.com/kivihub/go-project v0.0.0-20220609171025-ddc571bdbc13 h1:MrU4ZtKX/fNJ+jXU5UlKeNSXNIY2Bs1yrZzEiRkzjAw=
 github.com/kivihub/go-project v0.0.0-20220609171025-ddc571bdbc13/go.mod h1:NVSXstZcVIo1hKksece+1S1JuwXTNuJvRXqezaVxQYQ=
+github.com/kivihub/go-project v0.0.0-20220610025404-786350dcdde2 h1:HsDfWbbHgO8LtIBaZtspbLueWiKJL3FiX4qToVVsRuU=
+github.com/kivihub/go-project v0.0.0-20220610025404-786350dcdde2/go.mod h1:NVSXstZcVIo1hKksece+1S1JuwXTNuJvRXqezaVxQYQ=
