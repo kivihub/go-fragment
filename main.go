@@ -1,8 +1,9 @@
 package main
 
 import (
-	"go-fragment/logger"
-	"go-fragment/util"
+	"github.com/kivihub/go-fragment/logger"
+	"github.com/kivihub/go-fragment/util"
+	utils "github.com/kivihub/go-project/util"
 	"os"
 )
 
@@ -17,4 +18,6 @@ func main() {
 	logger.Infoln("[main.go#main] start")
 	os.Setenv("FromMain", "any")
 	util.PrintAllEnv()
+
+	utils.Echo("call go-project")
 }

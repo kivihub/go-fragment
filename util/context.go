@@ -3,7 +3,7 @@ package util
 import (
 	"context"
 	"flag"
-	"go-fragment/logger"
+	"github.com/kivihub/go-fragment/logger"
 	"os"
 )
 
