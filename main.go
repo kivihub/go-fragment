@@ -1,9 +1,20 @@
 package main
 
 import (
-	util "github.com/kivihub/go-project/util"
+	"go-fragment/logger"
+	"go-fragment/util"
+	"os"
 )
 
+var setEnv = os.Setenv("FromGlobalVar", "any")
+
+func init() {
+	logger.Infoln("[main.go#init] start")
+	os.Setenv("FromInit", "any")
+}
+
 func main() {
-	util.Echo("hello")
+	logger.Infoln("[main.go#main] start")
+	os.Setenv("FromMain", "any")
+	util.PrintAllEnv()
 }
