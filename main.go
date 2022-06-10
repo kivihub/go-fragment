@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/kivihub/go-fragment/logger"
 	"github.com/kivihub/go-fragment/util"
+	go_project "github.com/kivihub/go-project"
 	utils "github.com/kivihub/go-project/util"
 	"os"
 )
@@ -20,4 +21,5 @@ func main() {
 	util.PrintAllEnv()
 
 	utils.Echo("call go-project")
+	go_project.GetGlobalVar()
 }
