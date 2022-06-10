@@ -22,7 +22,7 @@ func Init() {
 	flag.StringVar(&Version, "version", "default", "Version")
 	flag.Parse()
 
-	fmt.Printf("[util.go] Version is %s\n", Version)
-	fmt.Printf("[util.go] psmFromFlag is %s\n", PsmFromFlag)
-	fmt.Printf("[util.go] psmFromEnv is %s\n", PsmFromEnv)
+	fmt.Printf("[context.go] Version is %s\n", Version)
+	fmt.Printf("[context.go] psmFromFlag is %s\n", PsmFromFlag)
+	fmt.Printf("[context.go] psmFromEnv is %s\n", PsmFromEnv)
 }

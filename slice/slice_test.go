@@ -1,26 +1,28 @@
 package slice
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestSliceLen(t *testing.T) {
 	var slice []string
-	fmt.Println(len(slice))
+	t.Log("slice:", slice)
+	t.Log("slice len:", len(slice))
+	t.Log("slice cap:", cap(slice))
+
 	slice = append(slice, "1")
-	slice = append(slice, "1")
-	slice = append(slice, "1")
-	fmt.Println(slice)
-	fmt.Println(len(slice))
-	fmt.Println(cap(slice))
+	slice = append(slice, "2")
+	slice = append(slice, "3")
+	t.Log("slice:", slice)
+	t.Log("slice len:", len(slice))
+	t.Log("slice cap:", cap(slice))
 }
 
-func TestSlice(t *testing.T) {
-	slice := []string{"1", "3"}
-	fmt.Println("size:", len(slice))
+func TestSliceRange(t *testing.T) {
+	slice := []string{"hello", "go"}
+	t.Log("size:", len(slice))
+
 	for i, item := range slice {
-		fmt.Println("i", i, "item", item)
+		t.Log("index:", i, "item:", item)
 	}
-	fmt.Println("end")
 }
