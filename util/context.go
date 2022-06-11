@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"github.com/kivihub/go-fragment/logger"
+	go_project "github.com/kivihub/go-project"
 	"os"
 )
 
@@ -58,4 +59,8 @@ func PrintOsEnv() {
 func PrintCtx() {
 	ctx := context.Background()
 	logger.Infof("[context.go#PrintCtx] %v\n", ctx)
+}
+
+func CycleImport() {
+	go_project.GetVersion()
 }

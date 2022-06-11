@@ -3,7 +3,7 @@ module github.com/kivihub/go-fragment
 go 1.18
 
 require (
-	github.com/kivihub/go-project v0.0.0-20220610103545-cb5cf7cf7d71
+	github.com/kivihub/go-project v0.0.0-20220611052921-5fb1188cebc5
 	github.com/sirupsen/logrus v1.8.1
 	github.com/x-cray/logrus-prefixed-formatter v0.5.2
 )
