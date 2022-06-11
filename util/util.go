@@ -4,7 +4,6 @@ import (
 	"context"
 	"flag"
 	"github.com/kivihub/go-fragment/logger"
-	go_project "github.com/kivihub/go-project"
 	"os"
 )
 
@@ -14,7 +13,7 @@ var PsmFromFlag string
 var PsmFromEnv = os.Getenv("psm")
 
 func init() {
-	logger.Infoln("[context.go#init] start")
+	logger.Infoln("[util.go#init] start")
 	PrintOsEnv()
 }
 
@@ -39,9 +38,9 @@ func ParseFlag() {
 		flag.Parse()
 	}
 
-	logger.Infof("[context.go#ParseFlag] Version is %s\n", Version)
-	logger.Infof("[context.go#ParseFlag] psmFromFlag is %s\n", PsmFromFlag)
-	logger.Infof("[context.go#ParseFlag] psmFromEnv is %s\n", PsmFromEnv)
+	logger.Infof("[util.go#ParseFlag] Version is %s\n", Version)
+	logger.Infof("[util.go#ParseFlag] psmFromFlag is %s\n", PsmFromFlag)
+	logger.Infof("[util.go#ParseFlag] psmFromEnv is %s\n", PsmFromEnv)
 }
 
 func ParseFlagAgain() {
@@ -49,7 +48,7 @@ func ParseFlagAgain() {
 		ParseFlag()
 	}
 	ret := flag.Lookup("psm")
-	logger.Infof("[context.go#ParseFlagAgain] psmFromFlag is %s\n", ret.Value)
+	logger.Infof("[util.go#ParseFlagAgain] psmFromFlag is %s\n", ret.Value)
 }
 
 func PrintOsEnv() {
@@ -58,9 +57,14 @@ func PrintOsEnv() {
 
 func PrintCtx() {
 	ctx := context.Background()
-	logger.Infof("[context.go#PrintCtx] %v\n", ctx)
+	logger.Infof("[util.go#PrintCtx] %v\n", ctx)
 }
 
 func CycleImport() {
-	go_project.GetVersion()
+	//util.GetVersion()
+}
+
+func SetOSEnv(key, value string) (ret string){
+	os.Setenv(key, value)
+	return value
 }

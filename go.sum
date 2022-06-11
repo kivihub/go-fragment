@@ -20,6 +20,8 @@ github.com/kivihub/go-project v0.0.0-20220610103545-cb5cf7cf7d71 h1:EQWAKeYSLrLp
 github.com/kivihub/go-project v0.0.0-20220610103545-cb5cf7cf7d71/go.mod h1:TrcgGx078Qnr9c+RlU2+sIM7hqE8C71ZuyPsUUtKbQM=
 github.com/kivihub/go-project v0.0.0-20220611052921-5fb1188cebc5 h1:7JdrpScurCtavXZnYOvU6K65ugDzdsQwZBU55iod6w0=
 github.com/kivihub/go-project v0.0.0-20220611052921-5fb1188cebc5/go.mod h1:MrlhtOyH2hyGgDKWjHVo5nGptINlNROlmWQB1RHAj8E=
+github.com/kivihub/go-project v0.0.0-20220611054339-55f5ccb37745 h1:AjctLLOWnGb2YfRvpkHyC24QbeRlmwER/+Cp/GLGpK4=
+github.com/kivihub/go-project v0.0.0-20220611054339-55f5ccb37745/go.mod h1:MrlhtOyH2hyGgDKWjHVo5nGptINlNROlmWQB1RHAj8E=
 github.com/mattn/go-colorable v0.1.12 h1:jF+Du6AlPIjs2BiUiQlKOX0rt3SujHxPnksPKZbaA40=
 github.com/mattn/go-colorable v0.1.12/go.mod h1:u5H1YNBxpqRaxsYJYSkiCWKzEfiAb1Gb520KVy5xxl4=
 github.com/mattn/go-isatty v0.0.14 h1:yVuAays6BHfxijgZPzw+3Zlu5yQgKGP2/hcQbHb7S9Y=
