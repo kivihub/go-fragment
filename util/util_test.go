@@ -16,8 +16,13 @@ func TestPrintCtx(t *testing.T) {
 
 func TestParseFlag(t *testing.T) {
 	ParseFlag()
+	ParseFlagAgain()
 }
 
 func TestPrintOsEnv(t *testing.T) {
 	PrintOsEnv()
+}
+
+func TestPrintOsArgs(t *testing.T) {
+	PrintOsArgs()
 }

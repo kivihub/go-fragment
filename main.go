@@ -15,4 +15,7 @@ func init() {
 func main() {
 	logger.Infoln("[main.go#main] start")
 	util.SetOSEnv("FromMain", "any")
+	util.ParseFlag()
+	util.PrintOsArgs()
+	util.PrintProcessInfo()
 }

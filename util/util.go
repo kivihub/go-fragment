@@ -4,6 +4,9 @@ import (
 	"context"
 	"flag"
 	"github.com/kivihub/go-fragment/logger"
+
+	"github.com/shirou/gopsutil/process"
+
 	"os"
 )
 
@@ -12,10 +15,10 @@ var Version = ""
 var PsmFromFlag string
 var PsmFromEnv = os.Getenv("psm")
 
-func init() {
-	logger.Infoln("[util.go#init] start")
-	PrintOsEnv()
-}
+//func init() {
+//	logger.Infoln("[util.go#init] start")
+//	PrintOsEnv()
+//}
 
 func PrintAllEnv() {
 	ParseFlag()
@@ -41,6 +44,7 @@ func ParseFlag() {
 	logger.Infof("[util.go#ParseFlag] Version is %s\n", Version)
 	logger.Infof("[util.go#ParseFlag] psmFromFlag is %s\n", PsmFromFlag)
 	logger.Infof("[util.go#ParseFlag] psmFromEnv is %s\n", PsmFromEnv)
+	logger.Infof("[util.go#ParseFlag] flag.args", flag.Args())
 }
 
 func ParseFlagAgain() {
@@ -51,8 +55,15 @@ func ParseFlagAgain() {
 	logger.Infof("[util.go#ParseFlagAgain] psmFromFlag is %s\n", ret.Value)
 }
 
+func PrintOsArgs() {
+	logger.Infoln("os.Args", os.Args)
+	for idx, arg := range os.Args {
+		logger.Infoln(idx, arg)
+	}
+}
+
 func PrintOsEnv() {
-	logger.Infoln(os.Environ())
+	logger.Infoln("os.Env", os.Environ())
 }
 
 func PrintCtx() {
@@ -64,7 +75,11 @@ func CycleImport() {
 	//util.GetVersion()
 }
 
-func SetOSEnv(key, value string) (ret string){
+func SetOSEnv(key, value string) (ret string) {
 	os.Setenv(key, value)
 	return value
+}
+
+func PrintProcessInfo() {
+	process.Pids()
 }
