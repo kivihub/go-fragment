@@ -17,34 +17,65 @@ func TestPointer(t *testing.T) {
 	fmt.Println(Cap, cap(s)) // 20 20
 }
 
-func TestPointer2(t *testing.T) {
+var myName = "kivi"
+
+func TestConvertByValue(t *testing.T) {
 	user := User{
-		name:     "kivi",
+		name:     &myName,
 		age:      1,
 		favorite: "football",
 	}
-	user_ := *(*User_)(unsafe.Pointer(&user))
-
+	// 浅复制副本
+	user_addr := *(*User_)(unsafe.Pointer(&user))
 	fmt.Println("user addr", unsafe.Pointer(&user))
-	fmt.Println("user_ addr", unsafe.Pointer(&user_))
+	fmt.Println("user_addr", unsafe.Pointer(&user_addr))
 
-	fmt.Println("user", user)
-	fmt.Println("user_", user_)
+	// 指针内容更新
+	*user.name = "wqw"
+	if *user.name == *user_addr.name {
+		t.Log("same after update user.name")
+	}
+	// 非指针内容更新
+	user.favorite = "beer"
+	if user.favorite != user_addr.favorite {
+		t.Log("diff after update user.favorite")
+	}
+}
 
-	user.name = "wqw"
-	fmt.Println("==update user.name==")
-	fmt.Println("user", user)
-	fmt.Println("user_", user_)
+func TestConvertByPointer(t *testing.T) {
+	user := &User{
+		name:     &myName,
+		age:      1,
+		favorite: "football",
+	}
+	user_ := (*User_)(unsafe.Pointer(user))
+
+	fmt.Println("user addr", unsafe.Pointer(user))
+	fmt.Println("user_ addr", unsafe.Pointer(user_))
+
+	*user.name = "wqw"
+	if *user.name == *user_.name {
+		t.Log("same after update user.name")
+	} else {
+		t.Error("diff after update user.name")
+	}
+
+	user.favorite = "beer"
+	if user.favorite == user_.favorite {
+		t.Log("same after update user.favorite")
+	} else {
+		t.Error("diff after update user.favorite")
+	}
 }
 
 type User struct {
-	name     string
+	name     *string
 	age      int8
 	favorite string
 }
 
 type User_ struct {
-	name     string
+	name     *string
 	age      int8
 	favorite string
 }
