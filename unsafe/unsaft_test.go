@@ -25,9 +25,10 @@ func TestConvertByValue(t *testing.T) {
 		age:      1,
 		favorite: "football",
 	}
-	// 浅复制副本
-	user_addr := *(*User_)(unsafe.Pointer(&user))
 	fmt.Println("user addr", unsafe.Pointer(&user))
+	fmt.Println("user_addr", unsafe.Pointer((*User_)(unsafe.Pointer(&user))))
+	// go等号复制是浅复制
+	user_addr := *(*User_)(unsafe.Pointer(&user))
 	fmt.Println("user_addr", unsafe.Pointer(&user_addr))
 
 	// 指针内容更新
