@@ -26,3 +26,10 @@ func TestSliceRange(t *testing.T) {
 		t.Log("index:", i, "item:", item)
 	}
 }
+
+func TestAppend(t *testing.T) {
+	var arr []string
+	arr = append(arr, "hello")
+	arr = append(arr, "world")
+	t.Logf("%+v", arr)
+}
